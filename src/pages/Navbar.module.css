@@ -1,0 +1,357 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: relative;
+}
+
+.wul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.mobileMenuToggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #454545;
+  transition: 0.3s;
+}
+
+.wul ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+  font-size: 14px;
+  color: #454545;
+  margin-top: 24px;
+  padding: 0;
+}
+
+.wul ul li a {
+  color: #454545;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.wul ul li a:hover {
+  color: #000;
+}
+
+.ws {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.phoneNumber {
+  font-weight: 500;
+}
+
+.callback {
+  color: #454545;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 29px;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+.navp .navp1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.navp .navp1 span {
+  font-size: 29px;
+  font-weight: bold;
+}
+
+.navp2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  max-width: 800px;
+}
+
+.catalogBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  background-color: #454545;
+  width: 150px;
+  height: 50px;
+  border-radius: 100px;
+  border: #454545;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.catalogBtn:hover {
+  background-color: #333;
+}
+
+.searchContainer {
+  position: relative;
+  flex: 1;
+  max-width: 626px;
+}
+
+.navp2 input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #454545;
+  border-radius: 100px;
+  padding-left: 24px;
+  font-size: 16px;
+}
+
+.searchToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.searchClose {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.navIcons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navIcon {
+  max-width: 64px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navIcon p {
+  font-size: 12px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.navp2 div:first-child img {
+  width: 20px;
+  height: 18px;
+}
+
+.navp2 div:nth-child(2) img {
+  width: 20px;
+  height: 20px;
+}
+
+.navp2 div:last-child img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .wul {
+    flex-wrap: wrap;
+    padding: 8px 16px;
+  }
+
+  .mobileMenuToggle {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navUl {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navUlOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navUl li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .ws {
+    margin-left: auto;
+    gap: 16px;
+  }
+
+  .phoneNumber {
+    font-size: 14px;
+  }
+
+  .callback {
+    font-size: 14px;
+  }
+
+  .navp {
+    flex-direction: column;
+    gap: 16px;
+    padding: 8px 16px;
+  }
+
+  .navp2 {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .catalogBtn {
+    width: 120px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .searchContainer {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .searchVisible {
+    display: block;
+  }
+
+  .searchToggle {
+    display: block;
+  }
+
+  .searchClose {
+    display: block;
+  }
+
+  .navIcons {
+    gap: 12px;
+  }
+
+  .navIcon {
+    max-width: 50px;
+  }
+
+  .navIcon p {
+    font-size: 10px;
+  }
+
+  .navp .navp1 span {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wul {
+    padding: 8px 12px;
+  }
+
+  .navp {
+    padding: 8px 12px;
+  }
+
+  .navp2 {
+    gap: 8px;
+  }
+
+  .catalogBtn {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .navIcons {
+    gap: 8px;
+  }
+
+  .navIcon {
+    max-width: 40px;
+  }
+
+  .navIcon img {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .phoneNumber {
+    font-size: 12px;
+  }
+
+  .callback {
+    font-size: 12px;
+  }
+
+  .navp .navp1 span {
+    font-size: 20px;
+  }
+}
