@@ -1,0 +1,12 @@
+export { default as CatalogIcon } from "./Catalog.icon";
+export { default as SearchIcon } from "./Search.icon";
+export { default as HeartIcon } from "./Heart.icon";
+export { default as NetworkIcon } from "./Network.icon";
+export { default as CartIcon } from "./Cart.icon";
+export { default as VK } from "./VK.icon";
+export { default as UpArr } from "./UpArr.icon";
+export { default as Karzinka } from "./Karzinka.icon";
+export { default as Left } from "./Left.icon";
+export { default as Right } from "./Right.icon";
+export { default as Strelka } from "./Strelka.icon";
+export { default as RightArr } from "./RightArr.icon";
