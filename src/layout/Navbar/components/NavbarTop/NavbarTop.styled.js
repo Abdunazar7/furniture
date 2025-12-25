@@ -7,6 +7,11 @@ export const NavTopWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 export const NavTopSide = styled.div`

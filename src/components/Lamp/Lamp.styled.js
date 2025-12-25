@@ -21,10 +21,10 @@ export const ProductsGrid = styled.div`
 export const ProductCard = styled.div`
   padding: 20px;
   transition: 0.3s;
-  width: 300px;
+  width: 100%;
 
   .product-heart{
-    padding-left: 240px;
+    padding-left: 80%;
   }
 
   &:hover {

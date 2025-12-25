@@ -40,6 +40,14 @@ export const CatalogGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CatalogCard = styled.div`
@@ -50,19 +58,36 @@ export const CatalogCard = styled.div`
   position: relative;
   transition: 0.3s;
 
+  padding-right: 140px;
+
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   }
 
+  @media (max-width: 480px) {
+    padding: 20px;
+    padding-right: 100px;
+    height: 200px;
+
+    img {
+      max-width: 150px;
+    }
+  }
+
   .title {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
   }
 
   img {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    max-width: 200px;
+    height: auto;
+    z-index: 1;
   }
 
   span {
@@ -71,5 +96,6 @@ export const CatalogCard = styled.div`
     bottom: 30px;
     font-size: 14px;
     color: #888;
+    z-index: 2;
   }
 `;

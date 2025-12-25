@@ -4,6 +4,10 @@ export const Houses1 = styled.div`
   display: flex;
   gap: 20px;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   .Catalog {
     display: flex;
     justify-content: space-between;

@@ -5,12 +5,27 @@ export const FooterWrapper = styled.footer`
   background-color: ${BackgroundColors.lightBlue};
   padding: 79px;
   margin-top: 60px;
+
+  @media (max-width: 768px) {
+    padding: 40px;
+  }
 `;
 
 export const FooterWrapper2 = styled.footer`
   display: flex;
   justify-content: center;
   gap: 146px;
+
+  @media (max-width: 1024px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   & p {
     margin-top: 30px;
   }
@@ -41,4 +56,9 @@ export const FooterVK = styled.footer`
 export const Footer_div2 = styled.footer`
   display: flex;
   gap: 71px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;

@@ -56,7 +56,41 @@ export const HomePage = styled.div`
     .Home_div {
       margin: 0 0 30px 0;
       width: 100%;
-      font-size: 40px;
+      p {
+        font-size: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px;
+    .Home_div {
+      p {
+        font-size: 32px;
+      }
+      .Home_color {
+        font-size: 18px;
+        padding: 10px 25px;
+      }
+    }
+    .Home_img {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+    .Home_div {
+      p {
+        font-size: 24px;
+      }
+      .Home_color {
+        font-size: 16px;
+        padding: 8px 20px;
+      }
+    }
+    .Home_img {
+      max-width: 200px;
     }
   }
 `;

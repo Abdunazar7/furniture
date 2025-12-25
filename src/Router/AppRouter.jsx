@@ -3,6 +3,9 @@ import { lazy, Suspense } from "react";
 import MainLayout from "../layout/MainLayout.jsx"
 import Loader from "../components/Loader/index.jsx";
 
+
+const Basket = lazy(() => import("../pages/Basket/index.jsx"));
+
 const Home = lazy(() => import("../pages/Home/index.jsx"));
 const Blog = lazy(() => import("../pages/Blog"));
 const Return = lazy(() => import("../pages/Return"));
@@ -28,6 +31,7 @@ function AppRouter() {
           <Route path="contacts" element={<Contacts />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="catalog" element={<Catalog />} />
+          <Route path="basket" element={<Basket />} />
         </Route>
       </Routes>
     </Suspense>

@@ -4,6 +4,10 @@ import { BackgroundColors, TextColors } from "../../../../theme";
 export const NavMainWrapper = styled.div`
   display: flex;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const SearchWrapper = styled.div`
@@ -18,6 +22,10 @@ export const SearchWrapper = styled.div`
     gap: 10px;
     height: 50px;
     padding: 14px 28px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
     border-radius: 100px;
     background-color: ${BackgroundColors.primary};
     border: none;
