@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAppNavigation } from "../../hooks/useAppNavigation";
 import { RightArr } from "../../components";
 import { CartStyled } from "./Basket.styled";
@@ -7,6 +7,10 @@ import product from "../../assets/product.png";
 
 function Basket() {
   const { goToHome, goToCatalog } = useAppNavigation();
+  const [count, setCount] = useState(1);
+
+  const [deliveryType, setDeliveryType] = useState("delivery");
+  const [paymentType, setPaymentType] = useState("card");
 
   return (
     <CartStyled>
@@ -42,18 +46,16 @@ function Basket() {
             </div>
             <div className="desc">
               Светильник RADUGA COMBO XS <br />
-              Промышленное освещение: <br />
-              50Вт; 230В; S4; XS
+              Промышленное освещение: 50Вт; 230В; S4; XS
             </div>
-            <div className="article">
-              RAD-COMBO-50/XXX/230/XXX/ <br />
-              XXX/S4/XS
-            </div>
+            <div className="article">RAD-COMBO-50/XXX/230/XXX/XXX/S4/XS</div>
             <div className="counter-wrapper">
               <div className="counter">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button onClick={() => setCount((p) => Math.max(1, p - 1))}>
+                  -
+                </button>
+                <span>{count}</span>
+                <button onClick={() => setCount((p) => p + 1)}>+</button>
               </div>
               <div className="delete-btn">
                 <Trash />
@@ -63,7 +65,6 @@ function Basket() {
         ))}
       </div>
 
-      {/* Form Sections */}
       <div className="section-box">
         <h2 className="section-title">Оформление</h2>
         <div className="form-grid">
@@ -75,28 +76,79 @@ function Basket() {
 
       <div className="section-box">
         <h2 className="section-title">Доставка</h2>
-        <input type="text" placeholder="Адрес доставки" />
+
+        <div className="radio-group">
+          <label className={deliveryType === "delivery" ? "active" : ""}>
+            <input
+              type="radio"
+              name="delivery"
+              checked={deliveryType === "delivery"}
+              onChange={() => setDeliveryType("delivery")}
+            />
+            <span className="custom-radio"></span>
+            Доставка
+          </label>
+          <label className={deliveryType === "pickup" ? "active" : ""}>
+            <input
+              type="radio"
+              name="delivery"
+              checked={deliveryType === "pickup"}
+              onChange={() => setDeliveryType("pickup")}
+            />
+            <span className="custom-radio"></span>
+            Самовывоз
+          </label>
+        </div>
+
+        {deliveryType === "delivery" && (
+          <input
+            type="text"
+            placeholder="Адрес доставки"
+            style={{ marginBottom: "20px" }}
+          />
+        )}
+
         <textarea placeholder="Комментарий"></textarea>
       </div>
 
-      {/* Payment Section */}
       <div className="section-box payment-box">
         <h2 className="section-title">Оплата</h2>
+
         <div className="summary-details">
-          <p className="summary-text">
-            Товары
-            <span>
-              ............................................................................
-            </span>
-            12 300₽
-          </p>
-          <p className="summary-text">
-            Доставка
-            <span>
-              ............................................................................
-            </span>
-            580₽
-          </p>
+          <div className="summary-row">
+            <span className="label">Товары</span>
+            <div className="dots"></div>
+            <b className="value">12 300₽</b>
+          </div>
+          <div className="summary-row">
+            <span className="label">Доставка</span>
+            <div className="dots"></div>
+            <b className="value">580₽</b>
+          </div>
+        </div>
+
+        <h3 className="sub-title">Способ оплаты</h3>
+        <div className="radio-group column">
+          <label className={paymentType === "card" ? "active" : ""}>
+            <input
+              type="radio"
+              name="payment"
+              checked={paymentType === "card"}
+              onChange={() => setPaymentType("card")}
+            />
+            <span className="custom-radio"></span>
+            Картой онлайн
+          </label>
+          <label className={paymentType === "cash" ? "active" : ""}>
+            <input
+              type="radio"
+              name="payment"
+              checked={paymentType === "cash"}
+              onChange={() => setPaymentType("cash")}
+            />
+            <span className="custom-radio"></span>
+            Наличными при получении
+          </label>
         </div>
 
         <div className="total-row">
