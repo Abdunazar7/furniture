@@ -2,8 +2,10 @@ import React from 'react';
 import { ProductCard, ProductsGrid } from './Lamp.styled';
 import { HeartIcon, Karzinka } from '../icons';
 import product from "../../assets/product.png";
+import { useAppNavigation } from '../../hooks/useAppNavigation';
 
 function Lamp(props) {
+    const { goToDetail } = useAppNavigation();
 
     const products = [
         {
@@ -61,18 +63,31 @@ function Lamp(props) {
         <ProductsGrid>
           {products.map((product) => (
             <ProductCard key={product.id}>
+              {/* Bu tugma detailga o'tmasligi kerak, faqat Like bosishi kerak */}
               <div className="product-heart">
                 <HeartIcon />
               </div>
-              <div className="product-img">
+
+              {/* Rasm bosilganda detailga o'tish */}
+              <div
+                className="product-img"
+                onClick={goToDetail}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={product.image} alt={product.name} />
               </div>
 
-              <p>{product.name}</p>
+              {/* Nomi bosilganda detailga o'tish */}
+              <p onClick={goToDetail} style={{ cursor: "pointer" }}>
+                {product.name}
+              </p>
+
               <span className="category">7 000₽</span>
 
               <div className="product-bottom">
                 <span className="price">{product.price}</span>
+
+                {/* Savat tugmasi ham detailga o'tmasligi kerak */}
                 <button className="cart-btn">
                   <Karzinka />
                 </button>

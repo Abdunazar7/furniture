@@ -54,7 +54,7 @@ export const WhyCard = styled.div`
   border: 1px solid #f2f2f2;
   border-radius: 10px;
   padding: 50px 30px;
-  min-height: 380px;
+  min-height: 30px;
   display: flex;
   flex-direction: column;
   transition: 0.3s;

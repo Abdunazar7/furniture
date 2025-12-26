@@ -23,12 +23,21 @@ import BrandsCalatog from "../../components/BrandsCatalog";
 import Houses from "../../components/Houses";
 import Text from "../../components/Text";
 
-function Catalog(props) {
+// ... importlar o'sha holatda qoladi
+
+export default function Catalog() {
   const { goToHome } = useAppNavigation();
+
+  const categories = [
+    "Люстры", "Светильники", "Бра", "Торшеры", 
+    "Настольные лампы", "Споты", "Трековые светильники", 
+    "Уличные светильники", "Технические светильники"
+  ];
 
   return (
     <div className="container">
       <CatalogWrapper>
+        {/* Top bar - Responsiv bo'ldi */}
         <div className="catalog_p">
           <p>Светильники</p>
           <p>Люстры</p>
@@ -37,69 +46,44 @@ function Catalog(props) {
           <p>Ночники</p>
           <p>Подстветка</p>
           <p>Уличное освещение</p>
-          <p>Мебельные установки</p>
         </div>
+
         <div className="navigate">
           <p onClick={goToHome}>Главная</p>
           <RightArr />
           <p>Каталог</p>
         </div>
+
         <div className="Catalog_h1">
           <h1>Каталог</h1>
         </div>
+
         <CatalogGrid>
-          {[
-            catalog1,
-            catalog2,
-            catalog3,
-            catalog4,
-            catalog5,
-            catalog6,
-            catalog7,
-            catalog8,
-            catalog9,
-          ].map((img, index) => (
+          {[catalog1, catalog2, catalog3, catalog4, catalog5, catalog6, catalog7, catalog8, catalog9].map((img, index) => (
             <CatalogCard key={index}>
-              <p className="title">
-                {
-                  [
-                    "Люстры",
-                    "Светильники",
-                    "Бра",
-                    "Торшеры",
-                    "Настольные лампы",
-                    "Споты",
-                    "Трековые светильники",
-                    "Уличные светильники",
-                    "Технические светильники",
-                  ][index]
-                }
-              </p>
-              <img src={img} alt="Catalog item" />
+              <p className="title">{categories[index]}</p>
+              <img src={img} alt={categories[index]} />
               <span>От 540₽ →</span>
             </CatalogCard>
           ))}
         </CatalogGrid>
+
         <CatalogGrid1>
           {[catalog10, catalog11].map((img, index) => (
             <CatalogCard key={index}>
               <p className="title">
-                {["Светодиодные ленты", "Комплектуюшие"][index]}
+                {index === 0 ? "Светодиодные ленты" : "Комплектующие"}
               </p>
-              <img src={img} alt="Catalog item" />
+              <img src={img} alt="item" />
               <span>От 540₽ →</span>
             </CatalogCard>
           ))}
         </CatalogGrid1>
 
         <BrandsCalatog />
-
         <Houses />
-
         <Text />
       </CatalogWrapper>
     </div>
   );
 }
-
-export default Catalog;

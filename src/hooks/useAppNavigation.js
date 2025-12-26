@@ -4,10 +4,13 @@ export const useAppNavigation = () => {
     const navigate = useNavigate();
 
     return {
-        goToHome: () => navigate("/"),
-        goToAbout: () => navigate("/about"),
-        goToAllProducts: () => navigate("/all-products"),
-        goToBlog: () => navigate("/blog"),
-        goToCatalog: () => navigate("/catalog")
+      goToHome: () => navigate("/"),
+      goToAbout: () => navigate("/about"),
+      goToAllProducts: () => navigate("/all-products"),
+      goToBlog: () => navigate("/blog"),
+      goToCatalog: () => navigate("/catalog"),
+      goToDetail: () => navigate("/detail"),
+      goToFavourites: () => navigate("/favourites"),
+      goToBasket: () => navigate("/basket"),
     };
 };

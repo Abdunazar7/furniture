@@ -10,11 +10,21 @@ function Blog(props) {
 
   return (
     <Blog1>
-      <div className="navigate">
-        <p onClick={goToHome}>Главная</p>
+      <nav
+        className="navigate"
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginBottom: "40px",
+          alignItems: "center",
+        }}
+      >
+        <p onClick={goToHome} style={{ color: "#808080", cursor: "pointer" }}>
+          Главная
+        </p>
         <RightArr />
-        <p>Блог</p>
-      </div>
+        <span>Блог</span>
+      </nav>
 
       <h1>Блог</h1>
 

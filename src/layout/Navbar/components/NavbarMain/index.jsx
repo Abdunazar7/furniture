@@ -28,16 +28,20 @@ function NavbarMain(props) {
         </SearchWrapper>
         <NavigationItems>
           <div className="item">
-            <HeartIcon />
-            <span>Избранное</span>
+            <NavLink
+              to="/favourites"
+              className="item"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <HeartIcon />
+              <span>Избранное</span>
+            </NavLink>
           </div>
           <div className="item">
             <NetworkIcon />
             <span>Сравнение</span>
           </div>
-          <div
-            className="item"
-          >
+          <div className="item">
             <NavLink
               to="/basket"
               className="item"

@@ -7,6 +7,7 @@ import { useAppNavigation } from "../../hooks/useAppNavigation";
 import house1 from "../../assets/houses/house1.png";
 import house2 from "../../assets/houses/house2.png";
 import house3 from "../../assets/houses/house3.png";
+import UpRight from "../icons/UpRight";
 
 function Houses({ showHeader = true }) {
   const { goToBlog } = useAppNavigation();
@@ -18,7 +19,7 @@ function Houses({ showHeader = true }) {
           <div className="sectionHeader">
             <h2>Блог</h2>
             <button onClick={goToBlog}>
-              Перейти в блог <UpArr />
+              Перейти в блог <UpRight />
             </button>
           </div>
         </WhySection>
@@ -29,7 +30,7 @@ function Houses({ showHeader = true }) {
           <img src={house1} alt="" />
           <div className="Catalog">
             <p>Как правильно освещать дом снаружи?</p>
-            <UpArr />
+            <UpRight />
           </div>
           <span>01.01.2024</span>
         </div>
@@ -38,7 +39,7 @@ function Houses({ showHeader = true }) {
           <img src={house2} alt="" />
           <div className="Catalog">
             <p>Как правильно освещать дом снаружи?</p>
-            <UpArr />
+            <UpRight />
           </div>
           <span>01.01.2024</span>
         </div>
@@ -47,7 +48,7 @@ function Houses({ showHeader = true }) {
           <img src={house3} alt="" />
           <div className="Catalog">
             <p>Как правильно освещать дом снаружи?</p>
-            <UpArr />
+            <UpRight />
           </div>
           <span>01.01.2024</span>
         </div>

@@ -1,78 +1,77 @@
 import React from "react";
-import { Navigate, Task } from "./About.styled";
+import * as S from "./About.styled";
 import { useAppNavigation } from "../../hooks/useAppNavigation";
 import { RightArr } from "../../components";
 import BrandCatalog from "../../components/BrandsCatalog";
-import Hauses from "../../components/Houses";
+import Houses from "../../components/Houses";
 
-function About(props) {
+function About() {
   const { goToHome } = useAppNavigation();
 
   return (
-    <div>
-      <Navigate>
-        <div className="navigate">
-          <p onClick={goToHome}>Главная</p>
-          <RightArr />
-          <p>О компании</p>
-        </div>
-      </Navigate>
+    <S.AboutWrapper>
+      <nav
+        className="navigate"
+        style={{
+          display: "flex",
+          gap: "10px",
+          marginBottom: "40px",
+          alignItems: "center",
+        }}
+      >
+        <p onClick={goToHome} style={{ color: "#808080", cursor: "pointer" }}>
+          Главная
+        </p>
+        <RightArr />
+        <span>О компании</span>
+      </nav>
 
-      <Task>
-        <div>
+      <S.Task>
+        <div className="left_side">
           <h1>О компании</h1>
+
           <div className="task1">
             <p>170+ </p>
             <p className="task2">Товаров</p>
           </div>
+
           <div className="task1">
             <p>1000+ </p>
             <p className="task2">Довольных покупателей</p>
           </div>
+
           <div className="task1">
             <p>170+ </p>
             <p className="task2">Товаров</p>
           </div>
         </div>
+
         <div className="text_p">
           <p>
             Интернет-магазин NORNLIGHT предлагает широкий ассортимент
             светильников для освещения вашего дома или офиса. У нас вы найдете
             разнообразные модели светильников, от современных и стильных до
-            классических и элегантных. Мы предлагаем качественные и надежные
-            светильники от лучших производителей, которые подарят вам комфорт и
-            уют.
+            классических и элегантных.
           </p>
           <p>
-            Покупая светильники в нашем интернет-магазине, вы получаете отличное
-            соотношение цены и качества. Мы осуществляем доставку по всей
-            России, чтобы каждый клиент мог насладиться прекрасным светом и
-            удобством покупки онлайн. Обратитесь к нам сегодня и превратите ваш
-            дом в оазис тепла и света с NORNLIGHT!
+            Мы предлагаем качественные и надежные светильники от лучших
+            производителей, которые подарят вам комфорт и уют. Покупая
+            светильники в нашем интернет-магазине, вы получаете отличное
+            соотношение цены и качества.
           </p>
           <p>
-            Интернет-магазин NORNLIGHT предлагает широкий ассортимент
-            светильников для освещения вашего дома или офиса. У нас вы найдете
-            разнообразные модели светильников, от современных и стильных до
-            классических и элегантных. Мы предлагаем качественные и надежные
-            светильники от лучших производителей, которые подарят вам комфорт и
-            уют.
-          </p>
-
-          <p>
-            Покупая светильники в нашем интернет-магазине, вы получаете отличное
-            соотношение цены и качества. Мы осуществляем доставку по всей
-            России, чтобы каждый клиент мог насладиться прекрасным светом и
-            удобством покупки онлайн. Обратитесь к нам сегодня и превратите ваш
-            дом в оазис тепла и света с NORNLIGHT!
+            Мы осуществляем доставку по всей России, чтобы каждый клиент мог
+            насладиться прекрасным светом и удобством покупки онлайн. Обратитесь
+            к нам сегодня и превратите ваш дом в оазис тепла и света с
+            NORNLIGHT!
           </p>
         </div>
-      </Task>
+      </S.Task>
 
+      {/* Brendlar va boshqa komponentlar */}
       <BrandCatalog />
-
-      <Hauses />
-    </div>
+      <Houses />
+    </S.AboutWrapper>
   );
 }
 

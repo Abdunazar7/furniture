@@ -10,3 +10,8 @@ export { default as Left } from "./Left.icon";
 export { default as Right } from "./Right.icon";
 export { default as Strelka } from "./Strelka.icon";
 export { default as RightArr } from "./RightArr.icon";
+export { default as OKIcon } from "./Ok.icon";
+export { default as WkIcon } from "./Wk.icon.jsx";
+export { default as TelegramIcon } from "./Telegram.icon";
+export { default as TelIcon } from "./Tel.icon";
+export { default as TelIcon2 } from "./Tel2.icon";
