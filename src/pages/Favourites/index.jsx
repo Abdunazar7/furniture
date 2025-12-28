@@ -1,11 +1,12 @@
 import React from "react";
 import { RightArr, HeartIcon, Karzinka } from "../../components";
+import { useAppNavigation } from "../../hooks/useAppNavigation";
 import * as S from "./Favourites.styled";
 
 import product from "../../assets/product.png";
 
-
 const Favourites = () => {
+  const { goToHome } = useAppNavigation();
   const favProducts = [
     {
       id: 1,
@@ -41,18 +42,19 @@ const Favourites = () => {
     <S.FavouritesWrapper>
       <div className="container">
         <nav
+          className="navigate"
           style={{
             display: "flex",
-            gap: "8px",
+            gap: "10px",
             marginBottom: "40px",
             alignItems: "center",
           }}
         >
-          <span style={{ color: "#808080", fontSize: "14px" }}>Главная</span>
+          <p onClick={goToHome} style={{ color: "#808080", cursor: "pointer" }}>
+            Главная
+          </p>
           <RightArr />
-          <span style={{ color: "#111", fontSize: "14px" }}>
-            Избранные товары
-          </span>
+          <span>Избранное</span>
         </nav>
 
         <S.FavHeader>

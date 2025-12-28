@@ -15,17 +15,20 @@ function About() {
         style={{
           display: "flex",
           gap: "10px",
-          marginBottom: "40px",
           alignItems: "center",
+          marginBottom: "40px",
+          marginTop: "40px",
         }}
       >
-        <p onClick={goToHome} style={{ color: "#808080", cursor: "pointer" }}>
+        <p
+          onClick={goToHome}
+          style={{ color: "#808080", cursor: "pointer", fontSize: "14px" }}
+        >
           Главная
         </p>
         <RightArr />
-        <span>О компании</span>
+        <span style={{ fontSize: "14px", fontWeight: "500" }}>О компании</span>
       </nav>
-
       <S.Task>
         <div className="left_side">
           <h1>О компании</h1>
@@ -67,7 +70,6 @@ function About() {
           </p>
         </div>
       </S.Task>
-
       {/* Brendlar va boshqa komponentlar */}
       <BrandCatalog />
       <Houses />
