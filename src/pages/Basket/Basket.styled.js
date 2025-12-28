@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 export const CartStyled = styled.div`
-  max-width: 1320px;
   width: 100%;
-  margin: 0 auto;
   padding: 0 20px 100px;
-  font-family: "Inter", sans-serif;
-  box-sizing: border-box;
   overflow-x: hidden;
 
   .navigate {

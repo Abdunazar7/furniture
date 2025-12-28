@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 export const Blog1 = styled.div`
-  max-width: 1320px;
   width: 100%;
-  margin: 0 auto;
-  padding: 0 20px 100px;
-  box-sizing: border-box;
   overflow-x: hidden;
 
   & h1 {

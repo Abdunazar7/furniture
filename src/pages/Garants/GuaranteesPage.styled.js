@@ -3,12 +3,6 @@ import styled from "styled-components";
 export const GuaranteesWrapper = styled.main`
   padding: 40px 0 100px;
   background-color: #fff;
-
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 `;
 
 export const MainLayout = styled.div`
@@ -40,7 +34,7 @@ export const TitleBox = styled.div`
 
 export const ContentBox = styled.div`
   flex: 1;
-  max-width: 650px;
+  max-width: 600px;
 
   h2 {
     font-size: 24px;

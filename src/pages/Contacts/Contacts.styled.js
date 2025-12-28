@@ -3,12 +3,6 @@ import styled from "styled-components";
 export const ContactsWrapper = styled.main`
   padding: 40px 0 0 0;
   background: #fff;
-
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 `;
 
 export const ContactHeader = styled.div`

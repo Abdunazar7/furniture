@@ -3,12 +3,6 @@ import styled from "styled-components";
 export const ReturnPageWrapper = styled.main`
   padding: 40px 0 100px;
   background-color: #fff;
-
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 `;
 
 export const ReturnLayout = styled.div`
@@ -43,7 +37,7 @@ export const TitleContainer = styled.div`
 
 export const InfoSection = styled.div`
   flex: 1;
-  max-width: 800px;
+  max-width: 650px;
 `;
 
 export const ContentBlock = styled.div`
@@ -62,11 +56,6 @@ export const ContentBlock = styled.div`
     color: #111;
     margin-bottom: 25px;
   }
-
-  .accent-blue {
-    color: #4567a7; /* Dizayndagi ko'k rang */
-    font-weight: 500;
-  }
 `;
 
 export const BulletList = styled.ul`
@@ -77,10 +66,10 @@ export const BulletList = styled.ul`
   li {
     font-size: 18px;
     line-height: 1.6;
-    color: #4567a7; /* Ro'yxat matni rangi */
+    color: #3b68bdff; /* Ro'yxat matni rangi */
     position: relative;
     padding-left: 20px;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 
     &::before {
       content: "•";

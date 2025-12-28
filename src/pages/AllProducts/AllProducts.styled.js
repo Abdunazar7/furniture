@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const All = styled.div`
-  max-width: 1320px;
-  margin: 0 auto 100px; /* margin-bottom 1141px o'rniga normal masofa */
-  padding: 0 20px;
+  margin: 0 auto 100px;
 
   .navigate {
     display: flex;

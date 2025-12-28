@@ -4,12 +4,6 @@ import { TextColors, BackgroundColors } from "../.././theme";
 export const DetailWrapper = styled.section`
   padding: 40px 0 100px;
 
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   .navigate {
     display: flex;
     align-items: center;

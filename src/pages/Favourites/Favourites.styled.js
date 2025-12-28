@@ -4,11 +4,6 @@ export const FavouritesWrapper = styled.main`
   padding: 40px 0 100px;
   background-color: #fff;
 
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 `;
 
 export const FavHeader = styled.div`

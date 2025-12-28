@@ -4,11 +4,6 @@ export const PageWrapper = styled.main`
   padding: 40px 0 100px 0;
   background: #fff;
 
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 `;
 
 export const MainContent = styled.section`
@@ -40,7 +35,7 @@ export const TitleSide = styled.div`
 
 export const TextSide = styled.div`
   flex: 1.5;
-  max-width: 800px;
+  max-width: 700px;
 `;
 
 export const InfoSection = styled.div`
@@ -60,8 +55,7 @@ export const InfoSection = styled.div`
     margin-bottom: 25px;
 
     a {
-      color: #454545;
-      text-decoration: underline;
+      text-decoration: none;
       font-weight: 600;
       opacity: 0.8;
       &:hover {

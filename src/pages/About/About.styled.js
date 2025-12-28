@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 40px 20px;
   overflow-x: hidden;
   width: 100%;
-  box-sizing: border-box;
 `;
 
 export const Task = styled.section`
